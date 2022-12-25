@@ -1,7 +1,11 @@
-export const LoadingDots = ({ small }) => {
+type LoadingDotsProps = {
+  small?: boolean,
+};
+
+export const LoadingDots = ({ small = false }: LoadingDotsProps) => {
   return (
     <svg
-      className={`${small ? 'w-6' : 'w-10'} h-auto animate-pulse-fast`}
+      className={`${small ? "w-6" : "w-10"} h-auto animate-pulse-fast`}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 236 197"
